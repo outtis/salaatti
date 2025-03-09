@@ -1,41 +1,90 @@
+/* Taustakuva koko sivulle */
 body {
+    background-image: url('https://example.com/your-background-image.jpg'); /* Vaihda URL haluamaasi kuvaan */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
+/* Säiliö keskittää reseptin sisällön */
 .container {
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    font-size: 2rem;
-    color: #4CAF50;
+/* Reseptin otsikko */
+.resepti-otsikko h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-#resepti {
-    margin: 20px 0;
-    font-size: 1.2rem;
+/* Ainekset oikeaan reunaan */
+.resepti-sisalto {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ohje {
+    width: 60%;
+}
+
+.ainekset {
+    width: 15%;
+    text-align: left;
+}
+
+/* Ainekset ja ohjeet tyyli */
+h2 {
+    color: #27ae60;
+}
+
+p, ul {
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: "•";
+    color: #27ae60;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Hae resepti -painike */
+.painike-kontti {
+    text-align: center;
+    margin-top: 20px;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #27ae60;
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2ecc71;
 }
